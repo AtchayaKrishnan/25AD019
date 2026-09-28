@@ -16,7 +16,7 @@ public class Donation {
     private String type;
 
     private String category;
-
+    @Column(name = "item_condition")
     private String condition;
 
     private String ageGroup;
