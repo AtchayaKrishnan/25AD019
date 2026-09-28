@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DonarDrive</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        Donar<span>Drive</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#donate">Donate</a>
+        <a href="#donations">Records</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            DONATION MANAGEMENT SYSTEM
+        </p>
+
+        <h1>
+            Give What You Can.
+        </h1>
+
+        <h2>
+            Make Someone's Day Better.
+        </h2>
+
+        <p>
+            DonarDrive connects donated items with
+            organizations and people who need them.
+        </p>
+
+        <a href="#donate" class="button">
+            Donate Now
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DONATION FORM ================= -->
+
+<section id="donate" class="section">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            CONTRIBUTE
+        </p>
+
+        <h2>
+            Make a Donation
+        </h2>
+
+        <p>
+            Enter the details of the item you would like to donate.
+        </p>
+
+    </div>
+
+
+    <div class="form-container">
+
+        <form id="donationForm">
+
+            <label for="donorName">
+                Donor Name
+            </label>
+
+            <input
+                    type="text"
+                    id="donorName"
+                    placeholder="Enter your name"
+                    required
+            >
+
+
+            <label for="type">
+                Donation Type
+            </label>
+
+            <select id="type" required>
+
+                <option value="">
+                    Select type
+                </option>
+
+                <option value="Clothing">
+                    Clothing
+                </option>
+
+                <option value="Food">
+                    Food
+                </option>
+
+                <option value="Books">
+                    Books
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <label for="category">
+                Category
+            </label>
+
+            <input
+                    type="text"
+                    id="category"
+                    placeholder="Example: Clothes"
+                    required
+            >
+
+
+            <label for="condition">
+                Condition
+            </label>
+
+            <select id="condition" required>
+
+                <option value="">
+                    Select condition
+                </option>
+
+                <option value="New">
+                    New
+                </option>
+
+                <option value="Good">
+                    Good
+                </option>
+
+                <option value="Used">
+                    Used
+                </option>
+
+            </select>
+
+
+            <label for="ageGroup">
+                Age Group
+            </label>
+
+            <select id="ageGroup" required>
+
+                <option value="">
+                    Select age group
+                </option>
+
+                <option value="Children">
+                    Children
+                </option>
+
+                <option value="Adults">
+                    Adults
+                </option>
+
+                <option value="Elderly">
+                    Elderly
+                </option>
+
+                <option value="All">
+                    All
+                </option>
+
+            </select>
+
+
+            <label for="gender">
+                Gender
+            </label>
+
+            <select id="gender">
+
+                <option value="">
+                    Select gender
+                </option>
+
+                <option value="Male">
+                    Male
+                </option>
+
+                <option value="Female">
+                    Female
+                </option>
+
+                <option value="Any">
+                    Any
+                </option>
+
+            </select>
+
+
+            <label for="quantity">
+                Quantity
+            </label>
+
+            <input
+                    type="number"
+                    id="quantity"
+                    min="1"
+                    placeholder="Enter quantity"
+                    required
+            >
+
+
+            <label for="donationDate">
+                Donation Date
+            </label>
+
+            <input
+                    type="date"
+                    id="donationDate"
+                    required
+            >
+
+
+            <label for="driveId">
+                Drive ID
+            </label>
+
+            <input
+                    type="number"
+                    id="driveId"
+                    placeholder="Enter drive ID"
+                    required
+            >
+
+
+            <button
+                    type="submit"
+                    class="submit-button"
+            >
+                Submit Donation
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RECORDS ================= -->
+
+<section id="donations" class="section records-section">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            DONATION ACTIVITY
+        </p>
+
+        <h2>
+            Donation Records
+        </h2>
+
+        <p>
+            View donations, recipients and distribution details.
+        </p>
+
+    </div>
+
+
+    <button
+            onclick="loadDonations()"
+            class="view-button"
+    >
+        View Records
+    </button>
+
+
+    <div id="donationList" class="donation-list">
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        Donar<span>Drive</span>
+    </div>
+
+    <p>
+        Connecting generosity with those who need it.
+    </p>
+
+    <p class="copyright">
+        © 2026 DonarDrive
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
