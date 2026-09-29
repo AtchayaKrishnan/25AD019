@@ -28,4 +28,17 @@ public class DistributionController {
     public List<Distribution> getAllDistributions() {
         return distributionService.getAllDistributions();
     }
+
+
+    // UPDATE DISTRIBUTION
+    @PutMapping("/{id}")
+    public Distribution updateDistribution(
+            @PathVariable Long id,
+            @RequestBody Distribution distribution) {
+
+        return distributionService.updateDistribution(
+                id,
+                distribution
+        );
+    }
 }
